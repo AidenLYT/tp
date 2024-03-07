@@ -10,9 +10,9 @@ LookMeUp also keeps track of the location and details of upcoming meetings speci
 Given below are my contributions to the project.
 
 * **New Feature**: 
-  * What it does: 
-  * Justification: 
-  * Highlights: 
+  * What it does:
+  * Justification:
+  * Highlights:
   * Credits: *{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}*
 
 * **New Feature**: 
@@ -29,15 +29,15 @@ Given below are my contributions to the project.
     * Assigned members to work on the respective issues
 
 * **Enhancements to existing features**:
-  * 
-  * 
+  *
+  *
 
 * **Documentation**:
   * User Guide:
-    * 
-    * 
+    *
+    *
   * Developer Guide:
-    * 
+    *
 
 * **Community**:
   * PRs reviewed (with non-trivial review comments): [\#12](), [\#32](), [\#19](), [\#42]()
@@ -46,6 +46,6 @@ Given below are my contributions to the project.
   * Some parts of the history feature I added was adopted by several other class mates ([1](), [2]())
 
 * **Tools**:
-  * 
-  * 
+  *
+  *
 
