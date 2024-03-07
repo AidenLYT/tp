@@ -1,7 +1,5 @@
----
-  layout: default.md
-  title: "Aiden Lee Yuan Ting's Project Portfolio Page"
----
+# Hello World! Welcome to Aiden's CS2103T Team Project Page
+## Currently a Year 2 NUS - Computer Science student
 
 ### Project: LookMeUp
 
