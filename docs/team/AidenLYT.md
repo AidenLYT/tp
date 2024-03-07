@@ -1,6 +1,6 @@
 ---
   layout: default.md
-  title: "Aiden Lee Ygit uan Ting's Project Portfolio Page"
+  title: "Aiden Lee Yuan Ting's Project Portfolio Page"
 ---
 
 ### Project: LookMeUp
