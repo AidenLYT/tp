@@ -59,24 +59,29 @@ public class EditCommandParser implements Parser<EditCommand> {
         Optional<String> emailToEdit = argMultimap.getValue(PREFIX_NAME);
         Optional<String> addressToEdit = argMultimap.getValue(PREFIX_NAME);
 
-        if (nameToEdit.isPresent()) {
-            Name nameEdited = ParserUtil.parseName(nameToEdit.get());
-            editPersonDescriptor.setName(nameEdited);
-        }
-        if (phoneToEdit.isPresent()) {
-            Phone phoneEdited = ParserUtil.parsePhone(phoneToEdit.get());
-            editPersonDescriptor.setPhone(phoneEdited);
-        }
-        if (emailToEdit.isPresent()) {
-            Email emailEdited = ParserUtil.parseEmail(emailToEdit.get());
-            editPersonDescriptor.setEmail(emailEdited);
-        }
-        if (addressToEdit.isPresent()) {
-            Address addressEdited = ParserUtil.parseAddress(addressToEdit.get());
-            editPersonDescriptor.setAddress(addressEdited);
+        try {
+            if (nameToEdit.isPresent()) {
+                Name nameEdited = ParserUtil.parseName(nameToEdit.get());
+                editPersonDescriptor.setName(nameEdited);
+            }
+            if (phoneToEdit.isPresent()) {
+                Phone phoneEdited = ParserUtil.parsePhone(phoneToEdit.get());
+                editPersonDescriptor.setPhone(phoneEdited);
+            }
+            if (emailToEdit.isPresent()) {
+                Email emailEdited = ParserUtil.parseEmail(emailToEdit.get());
+                editPersonDescriptor.setEmail(emailEdited);
+            }
+            if (addressToEdit.isPresent()) {
+                Address addressEdited = ParserUtil.parseAddress(addressToEdit.get());
+                editPersonDescriptor.setAddress(addressEdited);
+            }
+
+            parseTagsForEdit(argMultimap.getAllValues(PREFIX_TAG)).ifPresent(editPersonDescriptor::setTags);
+        } catch (ParseException err) {
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, EditCommand.MESSAGE_USAGE), err);
         }
 
-        parseTagsForEdit(argMultimap.getAllValues(PREFIX_TAG)).ifPresent(editPersonDescriptor::setTags);
 
         if (!editPersonDescriptor.isAnyFieldEdited()) {
             throw new ParseException(EditCommand.MESSAGE_NOT_EDITED);
