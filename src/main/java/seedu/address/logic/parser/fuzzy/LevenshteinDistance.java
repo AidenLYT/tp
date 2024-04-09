@@ -1,5 +1,9 @@
 package seedu.address.logic.parser.fuzzy;
 
+// @author https://www.geeksforgeeks.org/introduction-to-levenshtein-distance/ - reused
+// Levenshtein distance is a measure of the similarity between two strings, which takes into account the number of
+// insertion, deletion and substitution operations needed to transform one string into the other.
+
 /**
  * Distance function implemented using Levenshtein distance algorithm
  * Calculates minimum number of single-character edits required to change one string into another
